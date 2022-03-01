@@ -62,7 +62,7 @@ require('bufferline').setup {
             text_align = "left"
         }},
         show_buffer_icons = true, -- disable filetype icons for buffers
-        show_buffer_close_icons = true,
+        show_buffer_close_icons = false,
         show_tab_indicators = true,
         persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
         -- can also be a table containing 2 custom separators

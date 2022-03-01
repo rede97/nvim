@@ -6,9 +6,8 @@ return require('packer').startup(function()
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
-            'kyazdani42/nvim-web-devicons', -- optional, for file icon
-        },
-        config = function() require'nvim-tree'.setup {} end
+            'kyazdani42/nvim-web-devicons',
+        }
     }
 
 	use {
@@ -17,7 +16,6 @@ return require('packer').startup(function()
 	}
 
 	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
-	-- use '9mm/vim-closer'
 end)
 
 
