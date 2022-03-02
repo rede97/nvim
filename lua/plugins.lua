@@ -2,7 +2,7 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig'
     use 'glepnir/zephyr-nvim'
-    use "akinsho/toggleterm.nvim"
+    use 'akinsho/toggleterm.nvim'
     use 'feline-nvim/feline.nvim'
 
     use {
@@ -36,6 +36,16 @@ return require('packer').startup(function()
                 -- refer to the configuration section below
             }
         end
+    }
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
+    use {
+        'sindrets/diffview.nvim',
+        requires = 'nvim-lua/plenary.nvim'
     }
 
 end)

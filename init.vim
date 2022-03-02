@@ -1,12 +1,5 @@
 set termguicolors
 
-lua require('plugins')
-lua require('termcfg')
-lua require('tabcfg')
-lua require('treecfg')
-lua require('gitcfg')
-lua require('linecfg')
-
 call plug#begin()
 
 Plug 'terryma/vim-multiple-cursors'
@@ -14,6 +7,16 @@ Plug 'simrat39/symbols-outline.nvim'
 Plug 'mhartington/formatter.nvim'
 
 call plug#end()
+
+lua require('plugins')
+lua require('termcfg')
+lua require('tabcfg')
+lua require('treecfg')
+lua require('gitsigncfg')
+lua require('linecfg')
+lua require('treesittercfg')
+lua require('formattercfg')
+lua require('diffviewcfg')
 
 colorscheme zephyr
 
@@ -62,11 +65,15 @@ nnoremap <leader>pu :PackerUpdate<CR>
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>ph :checkhealth<CR>
 
+map <C-s> :w<CR>
 map <C-j> <C-w>h
 map <C-k> <C-w>l
-map <C-[> <C-w><
-map <C-]> <C-w>>
+map <A-;> <C-w><
+map <A-'> <C-w>>
+map <A-\> :vsplit<CR>
 
 nnoremap <A-[> :tabp<CR>
 nnoremap <A-]> :tabn<CR>
+
+nnoremap <A-f> :Format<CR>
 
